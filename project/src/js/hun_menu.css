@@ -1,0 +1,217 @@
+* {
+  user-select: none;
+  box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+.Menu {
+  position: relative;
+  width: 1200px;
+  min-height: 800px;
+  margin: 0 auto;
+}
+/* 상단 메뉴 */
+.menubackground {
+    position: absolute;
+    z-index: 1;
+
+    top: 5%;
+    left: 51%;
+    transform: translateX(-50%);
+
+    width: 85%;
+    max-width: 1600px;
+    min-height: 80px;
+
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    gap: 5%;
+
+    padding: 0 3%;
+}
+
+.menuName {
+    font-size: 1.3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: 2%;
+}
+
+.menu_home,
+.menu_item {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+}
+
+/* 소개 박스 */
+.two {
+    position: absolute;
+    z-index: 1;
+
+    top: 20%;
+    left: 33%;
+    transform: translateX(-50%);
+
+    width: 50%;
+    max-width: 900px;
+    height: 245px;
+
+    border: 1px solid black;
+    background-color: #ffffff;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px;
+}
+.tag {
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    margin: 0 0 40px 0;
+    line-height: 1.4;
+}
+
+.ks {
+    display: flex;
+    gap: 5%;
+    width: 100%;
+}
+
+.k,
+.s {
+    height: 55px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.k {
+    width: 45%;
+    background-color: blue;
+    color: #ffffff;
+}
+
+.s {
+    width: 35%;
+    border: 1px solid blue;
+    background-color: rgb(228, 228, 255);
+    color: blue;
+}
+
+/* 검색 박스 */
+.sch {
+    position: absolute;
+
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 85%;
+    max-width: 1600px;
+    min-height: 150px;
+
+    border: 1px solid gray;
+    border-radius: 25px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px 40px;
+}
+
+.schtext {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+.schmain {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+
+    width: 100%;
+}
+
+.schck {
+    width: 40%;
+    max-width: 600px;
+    min-width: 250px;
+
+    height: 35px;
+    border-radius: 25px;
+    padding-left: 15px;
+
+    cursor: text;
+}
+
+.schmain button,
+.schmain a,
+.schmain span {
+    font-size: 1rem;
+}
+
+.Search_c{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+}
+
+.searchList {
+    margin: 0;
+    padding: 0;
+}
+
+.searchList li {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.searchList li.selected {
+    background-color: rgb(220, 220, 255);
+    font-weight: bold;
+}
+/* 여기까지 팀원 코드 */
+
+.sjhun{
+    position: absolute;
+    top: 80%;
+    left: 9.5%;
+    width: 1300px;
+    height: 120px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 25px;
+}
