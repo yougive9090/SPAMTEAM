@@ -1,39 +1,118 @@
-.background{
-    position: absolute;
-    z-index: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f9f6f6;
-}
 .menubackground {
     position: absolute;
     z-index: 1;
-
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
-
-    top : 5%;
+    top: 5%;
     left: 7.5%;
     width: 85%;
     height: 10%;
     border: 0.1vw solid #000000;
-    border-radius: 10vw;
+    border-radius: 20px;
     background-color: #ffffff;
+    gap: 70px;
+    padding-left: 2%;
 }
-.menuName{
-    position: absolute;
-    z-index: 2;
+
+.menuName {
     font-size: 3vh;
     font-weight: bold;
-
-    left: 3%;
+    white-space: nowrap;
+    margin-right: 180px;  /* 이름이랑 메뉴 사이 간격 */
 }
-.menu_home{
-    position: absolute;
-    z-index: 2;
+
+.menu_home,
+.menu_item {
     font-size: 2.5vh;
     text-decoration: none;
     color: black;
-    left: 40%;
+    white-space: nowrap;
+}
+
+.two {
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    left: 9.5%;
+    width: 50%;
+    height: 25%;
+    border: 1px solid black;
+    background-color: #ffffff;
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.tag {
+    font-size: 40px;  /* 여기서 설정해도 똑같이 동작해요 */
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.ks{
+    display: flex;
+    gap: 30px;  /* k랑 s 사이 간격 */
+    width: 100%;
+    height: 50px;
+}
+.k{
+    width: 350px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: blue;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 20px;
+}
+.s{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid blue;
+    background-color: rgb(228, 228, 255);
+    color: blue;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 20px;
+}
+.sch{
+    position: absolute;
+    top: 50%;
+    left: 9.5%;
+    width: 1300px;
+    height: 120px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 25px;
+}
+.schmain{
+    display: flex;
+    gap: 30px;  /* k랑 s 사이 간격 */
+    width: 100%;
+    height: 50px;
+}
+.schtext{
+    font-size: 25px;
+    font-weight: bold;
+    width: 700px;
+    height: 15px;
+    padding-bottom: 30px;
+}
+.schck{
+    width: 500px;
+    height: 30px;
+    border-radius: 25px;
+    cursor: text;
 }
