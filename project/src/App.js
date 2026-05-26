@@ -2,6 +2,8 @@ import './App.css';
 import Menu from './js/menu';
 import Home from './js/home';
 import HunMenu from './js/hun_menu';
+import Home from './js/home';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -21,7 +23,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Main />} />
         </Routes>
       </BrowserRouter>
     

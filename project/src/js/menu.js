@@ -72,7 +72,7 @@ const related = keywords.filter((word) => {
         <div className="menuName">학교 정보 공유 플랫폼</div>
         <Link to="/home" className="menu_home">홈</Link>
         <div className="menu_item">대회</div>
-        <div className="menu_item">자격증</div>
+        <Link to="/Certificate" className="menu_item">자격증</Link>
         <div className="menu_item">프로그램</div>
         <div className="menu_item">동아리</div>
         <div className="menu_item">선배의 팁</div>

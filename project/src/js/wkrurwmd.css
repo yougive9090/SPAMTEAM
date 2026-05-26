@@ -1,0 +1,76 @@
+.major-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.major-box {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 30px 22px;
+
+  text-align: left; /* 여기 변경 */
+
+  border: 2px solid #dce5ff;
+  box-shadow: 0 10px 25px rgba(70, 100, 180, 0.15);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.major-box:hover {
+  transform: translateY(-10px);
+  border-color: #4b7bec;
+  box-shadow: 0 18px 35px rgba(70, 100, 180, 0.25);
+}
+
+.major-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 0 18px 0; /* 가운데 정렬 해제 */
+
+  background: linear-gradient(135deg, #4b7bec, #45aaf2);
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+}
+
+.major-box h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #1f2d5a;
+}
+
+.major-label {
+  margin: 8px 0;
+  color: #7a86a8;
+  font-size: 0.95rem;
+}
+
+.major-box h3 {
+  margin-top: 12px;
+  font-size: 1.05rem;
+  color: #3867d6;
+}
+
+/* 태블릿 */
+@media (max-width: 900px) {
+  .major-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 500px) {
+  .major-container {
+    grid-template-columns: 1fr;
+  }
+}
