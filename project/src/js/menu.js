@@ -88,7 +88,7 @@ const related = keywords.filter((word) => {
 
         <div className='ks'>
           <div className='k' onClick={() => document.getElementById('search').scrollIntoView({ behavior: 'smooth' })}>키워드로 정보 찾기</div>
-          <div className='s'>최근 게시글 보기</div>
+          <div className='s' onClick={() => document.getElementById('board').scrollIntoView({ behavior: 'smooth' })}>최근 게시글 보기</div>
         </div>
       </div>
 
