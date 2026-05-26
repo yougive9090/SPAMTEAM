@@ -2,7 +2,10 @@ import './menu.css';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 
+import popupData from '../pop_up.json';
 function Menu() {
+  //팝업 on n off 기억 상태방(기본 true)
+  const [isOpen, setIsOpen] = useState(true);
   const keywords = [
       "홈",
       "대회",
@@ -149,7 +152,29 @@ const related = keywords.filter((word) => {
       </div>
       </div>
 
-      
+        {/* 팝업 조립 존: isOpen이 true일 때만 우측 상단에 팝업을 띄운다! */}
+      {isOpen && (
+        <div className="popup-card">
+          <div className="popup-header">{popupData.title}</div>
+          
+          <div className="popup-body">
+            <h4 style={{ margin: '0 0 8px 0' }}>{popupData.noticeTitle}</h4>
+            {popupData.content.map((text, index) => (
+              <p key={index} style={{ margin: '4px 0' }}>{text}</p>
+            ))}
+          </div>
+
+          <div className="popup-footer">
+            <span style={{ fontSize: '13px', color: '#3498db', cursor: 'pointer' }}>
+              {popupData.buttons.linkText}
+            </span>
+            {/* 닫기를 누르면 setIsOpen(false)가 실행되어 팝업이 사라집니다 */}
+            <button className="close-btn" onClick={() => setIsOpen(false)}>
+              {popupData.buttons.closeText}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
