@@ -2,7 +2,7 @@ import './App.css';
 import Menu from './js/menu';
 import HunMenu from './js/hun_menu';
 import Home from './js/home';
-
+import Wkrurwmd from './js/wkrurwmd';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function Main() {
@@ -21,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/Certificate" element={<Wkrurwmd />} />
         </Routes>
       </BrowserRouter>
     </div>
