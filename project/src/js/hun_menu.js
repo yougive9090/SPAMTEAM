@@ -1,31 +1,49 @@
 import './hun_menu.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function HunMenu() {
     const [posts, setPosts] = useState([]);
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    const [userId, setUserId] = useState('');
 
-    const handleSubmit = () => {
-        if (title.trim() === '' || content.trim() === '') return;
-        
-        const newPost = {
-            id: Date.now(),
-            title: title,
-            content: content,
-            date: new Date().toLocaleDateString()
-        };
-        
-        setPosts([newPost, ...posts]);
+    // 게시글 목록 불러오기
+    const fetchPosts = async () => {
+        const res = await fetch('http://127.0.0.1:8000/posts');
+        const data = await res.json();
+        setPosts(data.reverse()); // 최신글 위로
+    };
+
+    // 페이지 로드 시 자동 불러오기
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    // 게시글 작성
+    const handleSubmit = async () => {
+        if (title.trim() === '' || content.trim() === '' || userId.trim() === '') return;
+
+        await fetch(`http://127.0.0.1:8000/posts?title=${title}&content=${content}&user_id=${userId}`, {
+            method: 'POST'
+        });
+
         setTitle('');
         setContent('');
+        setUserId('');
+        fetchPosts();
     };
 
     return (
-        <div className="sjhun">
+        <div className="sjhun" id="board">
             <div className="board-title">게시판</div>
-            
+
             <div className="write-area">
+                <input
+                    className="input-title"
+                    placeholder="유저 ID"
+                    value={userId}
+                    onChange={(e) => setUserId(e.target.value)}
+                />
                 <input
                     className="input-title"
                     placeholder="제목"
@@ -47,7 +65,7 @@ function HunMenu() {
                     <div className="post-item" key={post.id}>
                         <div className="post-header">
                             <span className="post-title">{post.title}</span>
-                            <span className="post-date">{post.date}</span>
+                            <span className="post-date">{post.user_id}</span>
                         </div>
                         <div className="post-content">{post.content}</div>
                     </div>
