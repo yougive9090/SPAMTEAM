@@ -14,7 +14,7 @@ body {
 .Menu {
   position: relative;
   width: 1200px;
-  min-height: 800px;
+  min-height: 100vh;
   margin: 0 auto;
 }
 /* 상단 메뉴 */
@@ -110,6 +110,7 @@ body {
     width: 45%;
     background-color: blue;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .s {
@@ -197,4 +198,8 @@ body {
 .searchList li.selected {
     background-color: rgb(220, 220, 255);
     font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
