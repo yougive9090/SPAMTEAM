@@ -18,7 +18,7 @@ function Home() {
       <a href="https://srobot.sen.hs.kr/67182/subMenu.do" alt="None" className="homelink">가정통신문</a>
 
       </div>
-      <a href="http://localhost:3000" alt="None" className="back"><img src="back.png" alt="Home"/></a>
+      <a href="http://localhost:3000" alt="None" className="back"><img src="back.png" alt="Home" className="back"/></a>
       
     </div>
   );
