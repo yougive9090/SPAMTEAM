@@ -1,7 +1,7 @@
 import "./wkrurwmd.css";
 import './home.css';
 
-function wkrurwmd() {
+function Wkrurwmd() {
   const majors = [
     {
       name: "설계과",
@@ -18,14 +18,14 @@ function wkrurwmd() {
       certs: [
         "전자캐드기능사",
         "임베디드기능사",
-        "전자기능사"
+        "전자기능사",
       ],
     },
     {
       name: "정보통신과",
       icon: "📡",
       certs: [
-        "아직 모름"
+        "아직 모름",
       ],
     },
     {
@@ -34,7 +34,7 @@ function wkrurwmd() {
       certs: [
         "프로그래밍기능사",
         "웹디자인개발기능사",
-        "컴퓨터활용능력2급이상"
+        "컴퓨터활용능력2급이상",
       ],
     },
   ];
@@ -55,9 +55,12 @@ function wkrurwmd() {
           </ol>
         </div>
       ))}
-      <a href="http://localhost:3000" alt="None" className="back"><img src="back.png" alt="Home" className="back"/></a>
+
+      <a href="/" className="back">
+        <img src="/back.png" alt="Home" className="back" />
+      </a>
     </div>
   );
 }
 
-export default wkrurwmd;
+export default Wkrurwmd;
