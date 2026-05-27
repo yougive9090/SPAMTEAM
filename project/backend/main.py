@@ -2,6 +2,7 @@
 import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from datetime import date
 
 app = FastAPI()
 
@@ -31,7 +32,13 @@ def get_posts():
 @app.post("/posts")
 def create_post(title: str, content: str, user_id: str):
     posts = load_posts()
-    new_post = {"id": len(posts) + 1, "title": title, "content": content, "user_id": user_id}
+    new_post = {
+    "id": len(posts) + 1,
+    "title": title,
+    "content": content,
+    "user_id": user_id,
+    "date": date.today().strftime("%Y.%m.%d")
+}
     posts.append(new_post)
     save_posts(posts)
     return new_post
