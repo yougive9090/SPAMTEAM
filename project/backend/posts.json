@@ -12,5 +12,19 @@
         "content": "ㅇㅁㄹ",
         "user_id": "ㅇㅁㅇㄹ",
         "date": "2026.05.28"
+    },
+    {
+        "id": 3,
+        "title": "grsdf",
+        "content": "adsfas",
+        "user_id": "gfv",
+        "date": "2026.05.28"
+    },
+    {
+        "id": 4,
+        "title": "테스트",
+        "content": "테스트 내용",
+        "user_id": "테스트",
+        "date": "2026.05.28"
     }
 ]
