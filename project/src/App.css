@@ -19,32 +19,39 @@ body {
   background-color: #eee;
 }
 /* 오렌지색 팝업 공지 상자 */
-.popup-card {
+.modal-overlay {
   position: fixed;
-  top: 20%;
-  right: 20%;
-  width: 23%;
-  background: white;
-  border: 2px solid #ffb03b;
+  top: 40px;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-card {
+  background-color: #fff5e6;
+  border: 1px solid #ff9f43;
   border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  z-index: 1000;
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .popup-header {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
 }
 
-.popup-body {
-  font-size: 14px;
+.popup-body p{
   color: #666;
-  line-height: 1.6;
   margin-bottom: 20px;
 }
 
